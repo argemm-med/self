@@ -1,6 +1,6 @@
 export const DoggeeApp = () => {
   return (
-    <div className='app dark'>
+    <div className="app dark">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto aut deleniti distinctio dolore ea
       eaque eligendi eum maiores nam nesciunt nobis, nostrum officiis pariatur praesentium provident quas quis sed sit
       voluptatum? Accusantium aspernatur assumenda aut blanditiis dicta dolore fugiat, incidunt itaque minus
