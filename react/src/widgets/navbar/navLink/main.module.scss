@@ -1,0 +1,21 @@
+.link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 10px;
+  width: 100%;
+  transition: all ease 0.2s;
+  border-radius: var(--border-radius--xs);
+  font-weight: 300;
+  font-variant: all-petite-caps;
+
+  &:hover {
+    background: var(--bg-accent);
+    border-right: 2px solid var(--color-primary);
+  }
+}
+
+.active {
+  background: var(--bg-accent);
+  border-right: 2px solid var(--color-accent--yellow);
+}
