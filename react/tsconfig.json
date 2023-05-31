@@ -1,35 +1,39 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "module": "ESNext",
+    "lib": [ "DOM", "DOM.Iterable", "ESNext" ],
+    "experimentalDecorators": true,
+    "jsx": "react-jsx",
+    "allowJs": false,
     "skipLibCheck": true,
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "paths": {
+      "@/*": [ "./src/*" ],
+      "entities/*": [ "./src/entities/*" ],
+      "features/*": [ "./src/features/*" ],
+      "pages/*": [ "./src/pages/*" ],
+      "shared/*": [ "./src/shared/*" ],
+      "widgets/*": [ "./src/widgets/*" ],
+      "app/*": [ "./src/app/*" ]
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules"
+      }
+    ]
   },
   "include": [
     "src"
   ],
-  "paths": {
-    "@/*": [
-      "./src/*"
-    ]
-  },
   "references": [
     {
       "path": "./tsconfig.node.json"
