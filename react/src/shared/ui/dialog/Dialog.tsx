@@ -3,7 +3,6 @@ import { type FC, type PropsWithChildren, useEffect } from 'react'
 import { type DialogProps } from './dialogProps.model'
 
 import cls from './dialog.module.scss'
-import { RenderCounter } from '@/shared/ui/renderCounter/RenderCounter'
 
 export const Dialog: FC<PropsWithChildren<DialogProps>> = (props) => {
   const {
@@ -29,7 +28,6 @@ export const Dialog: FC<PropsWithChildren<DialogProps>> = (props) => {
   return (
     <div className={ `${ cls.wrapper } ${ isVisible && cls.active }` }>
       <div className={ `${ cls.content } secondary` }>
-        <RenderCounter/>
         { header &&
           <div className={ cls.header }>
             { header }

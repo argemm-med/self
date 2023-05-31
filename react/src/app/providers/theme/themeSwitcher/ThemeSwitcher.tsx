@@ -3,7 +3,6 @@ import { CiDark, CiLight } from 'react-icons/ci'
 import { GiMoon } from 'react-icons/gi'
 
 import { type ThemeSwitcherProps } from './themeSwitcherProps.model'
-import { RenderCounter } from '@/shared/ui/renderCounter/RenderCounter'
 import { ThemeValueType } from 'app/providers/theme/ThemeContext'
 import { useTheme } from 'app/providers/theme/useTheme'
 
@@ -48,7 +47,6 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = memo(({ ...props }) => {
 
   return (
     <div className="switcher-wrapper secondary" { ...props }>
-      <RenderCounter/>
       { themes.map((el) => (
         <button
           ref={ el.label === activeTheme ? activeThemeRef : undefined }

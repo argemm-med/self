@@ -3,7 +3,6 @@ import React, { type FC, memo, type ReactNode, useLayoutEffect, useRef, useState
 import { type LayoutSwitcherProps } from './layoutSwitcherProps.model'
 import { AiOutlineLayout } from 'react-icons/ai'
 import { BsSegmentedNav } from 'react-icons/bs'
-import { RenderCounter } from '@/shared/ui/renderCounter/RenderCounter'
 import { LayoutContextProps } from 'app/providers/layout/LayoutContext'
 import { useLayout } from 'app/providers/layout/useLayout'
 
@@ -46,7 +45,6 @@ export const LayoutSwitcher: FC<LayoutSwitcherProps> = memo(({ ...props }) => {
 
   return (
     <div className="switcher-wrapper secondary" { ...props }>
-      <RenderCounter/>
       { layouts.map((el) => (
         <button
           ref={ el.value === layoutType ? activeBtnRef : undefined }
