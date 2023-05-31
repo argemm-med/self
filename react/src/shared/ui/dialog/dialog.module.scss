@@ -1,0 +1,49 @@
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.active {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1);
+}
+
+.content {
+  padding: 20px 40px 60px;
+  border-radius: 10px;
+  z-index: var(--z-modal);
+  position: relative;
+  min-height: 250px;
+  max-height: 70vh;
+  min-width: 250px;
+  max-width: 60vw;
+  background: var(--bg-secondary);
+  box-shadow: var(--bg-accent) 0 1px 2px 0, var(--bg-accent) 0 2px 6px 2px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.header {
+  background: var(--bg-secondary);
+  position: sticky;
+  top: -20px;
+  border-bottom: 2px solid var(--bg-accent);
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

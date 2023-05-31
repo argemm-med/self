@@ -1,0 +1,54 @@
+.float-wrapper {
+  position: relative;
+  background: var(--bg-primary);
+  color: var(--color-primary);
+}
+
+.float-wrapper label {
+  font-variant: all-small-caps;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(0, -50%) scale(1);
+  transform-origin: top left;
+  transition: all .1s ease-in-out;
+  color: inherit;
+}
+
+.float-wrapper input {
+  height: 100%;
+  width: 100%;
+  padding: 25px 40px 5px;
+  background: inherit;
+  color: inherit;
+  border-radius: var(--border-radius--xs);
+  border: 1px solid var(--bg-accent);
+  transition: 0.1s background ease;
+
+  &:focus {
+    background: var(--bg-secondary);
+  }
+}
+
+.active {
+  label {
+    transform: translate(0, -25px) scale(.75);
+    color: var(--color-accent--yellow);
+  }
+
+  input {
+    border: none;
+    border-bottom: 4px solid var(--bg-accent);
+  }
+}
+
+.error {
+  label {
+    color: var(--color-error);
+
+  }
+
+  input {
+    border: 1px solid var(--color-error);
+  }
+}
