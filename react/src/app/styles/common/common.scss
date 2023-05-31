@@ -1,0 +1,13 @@
+@import "./text";
+@import "./scrollbar";
+@import "./switcher";
+@import "./layout";
+
+.overlay {
+  inset: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: var(--z-overlay);
+  backdrop-filter: blur(2px);
+}
