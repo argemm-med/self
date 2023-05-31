@@ -1,12 +1,12 @@
 import ReactDOM from 'react-dom/client'
 import { StrictMode } from 'react'
 
-import { DoggeeApp } from './app/DoggeeApp.tsx'
+import { App } from 'app/App'
 
-import './app/styles/main.scss'
+import 'app/styles/main.scss'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <StrictMode>
-    <DoggeeApp/>
+    <App/>
   </StrictMode>,
 )
