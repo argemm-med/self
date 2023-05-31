@@ -1,0 +1,112 @@
+@mixin same-size($sz) {
+  width: $sz;
+  height: $sz;
+}
+
+.loader__wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  @include same-size(100%);
+
+  display: flex;
+  z-index: 1;
+  background-color: rgb(255 255 255 / 1%);
+  backdrop-filter: blur(1.5px);
+}
+
+.loader {
+  --sz: 7rem;
+
+  width: calc(var(--sz) * 2);
+  height: var(--sz);
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.loader__sq {
+  --p-sz: calc(var(--sz) / 4);
+
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 50%;
+
+  &::before,
+  &::after {
+    @include same-size(var(--p-sz));
+
+    content: "";
+    position: relative;
+    transform: translateY(calc((var(--sz) - var(--p-sz)) * -1));
+    animation: loader-box-bounce 0.5s cubic-bezier(0.3, 0.5, 0.4, 0.95) calc(var(--i) * 0.06s) infinite alternate-reverse;
+    margin-right: 5px;
+  }
+
+
+  &:first-of-type {
+    margin-right: 1px;
+
+    &::before {
+      --i: 2;
+
+      border: 3px solid #82e8d3;
+      box-shadow: 0 0 20px #82e8d3;
+    }
+
+    &::after {
+      --i: 1;
+
+      border: 3px solid #ff7ab5;
+      box-shadow: 0 0 20px #ff7ab5;
+      border-radius: 50%;
+    }
+  }
+
+  &:nth-of-type(2) {
+    top: -2px;
+
+    &::before {
+      --i: 3;
+
+      background-color: #c643fb;
+      display: inline-block;
+
+      @supports (clip-path: circle()) {
+        clip-path: polygon(9% 0, 0 10%, 40% 51%, 0 89%, 8% 100%, 50% 60%, 93% 100%, 100% 90%, 60% 52%, 100% 9%, 93% 0, 50% 40%);
+      }
+    }
+
+    &::after {
+      --i: 4;
+
+      background-color: #2fe2dd;
+      border-radius: 50%;
+      top: -1px;
+
+      @supports (clip-path: circle()) {
+        border-radius: 0;
+        clip-path: polygon(0 0, 46% 100%, 52% 92%, 11% 8%, 88% 8%, 45% 88%, 50% 100%, 100% 0%);
+      }
+    }
+  }
+
+  &:nth-of-type(3) {
+    &::before {
+      --i: 2;
+
+      border: 3px solid #ffb650;
+      box-shadow: 0 0 20px #ffb650;
+    }
+  }
+}
+
+@keyframes loader-box-bounce {
+  to {
+    transform: translateY(0);
+  }
+}
