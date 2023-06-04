@@ -15,6 +15,11 @@ export const Input = memo((props: InputProps) => {
     setActive(true)
   }
 
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    if (e.target.value) return false
+    setActive(false)
+  }
+
   return (
     <div
       className={ `${ active && cls.active } ${ meta.touched && meta.error && cls.error } ${ cls['float-wrapper'] }` }>
@@ -28,6 +33,10 @@ export const Input = memo((props: InputProps) => {
         onFocus={ handleFocus }
         { ...field }
         { ...meta }
+        onBlur={ e => {
+          handleBlur(e)
+          field.onBlur(e)
+        } }
       />
     </div>
   )
