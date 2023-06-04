@@ -1,5 +1,7 @@
 import { Form, Formik } from 'formik'
 import { type FC } from 'react'
+import { MdAlternateEmail } from 'react-icons/md'
+import { RiLockPasswordLine } from 'react-icons/ri'
 
 import { type DoggeeLoginForm, INITIAL_DOGGEE_LOGIN, SCHEMA_DOGGEE_LOGIN } from 'entities/doggee/doggeeLogin'
 import { type LoginProps } from './loginProps.model'
@@ -23,8 +25,18 @@ const Login: FC<LoginProps> = () => {
         <>
           <Form className={ `${ cls.block } secondary-block` }>
             <span>loging page</span>
-            <Input name='username' label='username' />
-            <Input name='password' label='password' />
+            <Input
+              autoFocus
+              name='username'
+              label='username'
+              preIcon={ <MdAlternateEmail /> }
+            />
+            <Input
+              name='password'
+              label='password'
+              preIcon={ <RiLockPasswordLine /> }
+              type='password'
+            />
             <Button label='auth button' />
           </Form>
         </>

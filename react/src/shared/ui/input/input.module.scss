@@ -2,8 +2,8 @@
   font-variant: all-small-caps;
   position: absolute;
   top: 50%;
-  left: 40px;
-  transform: translate(0, -50%) scale(1);
+  left: 30px;
+  transform: translate(0, -75%) scale(1);
   transform-origin: top left;
   transition: all .1s ease-in-out;
   color: inherit;
@@ -12,11 +12,18 @@
 .float-wrapper input {
   height: 100%;
   width: 100%;
-  padding: 25px 40px 5px;
+  padding: 25px 30px 5px;
   background: inherit;
   color: inherit;
-  border: 1px solid var(--bg-accent);
   transition: 0.1s background ease;
+  border-radius: var(--border-radius-xs);
+  border: none;
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 40rem var(--bg-primary) inset;
+    -webkit-text-fill-color: var(--color-primary);
+    appearance: none;
+  }
 
   &:focus {
     background: var(--bg-secondary);
@@ -29,7 +36,14 @@
   color: var(--color-primary);
   border-radius: var(--border-radius-xs);
   overflow: hidden;
-  height: 40px;
+  height: 45px;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+  }
 
   &.error {
     border: 1px solid var(--color-error);
@@ -39,13 +53,16 @@
     color: var(--color-error);
   }
 
+  &.error svg {
+    color: var(--color-error);
+  }
+
   &.active label {
     transform: translate(0, -20px) scale(.75);
     color: var(--color-accent-yellow);
   }
 
   &.active input {
-    border: none;
     border-bottom: 4px solid var(--bg-accent);
   }
 }
