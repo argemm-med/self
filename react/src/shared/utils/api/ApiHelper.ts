@@ -26,7 +26,7 @@ export const ApiHelper = async <T>({ url, ...options }: FetchOptions): Promise<T
     method: options.method ? options.method : 'get',
   })
     .json<Response<T>>()
-    .catch(async (err) => await Promise.reject({ name: err.name, msg: err.message }))
+    .catch(async (err) => await Promise.reject(new Error(err.message)))
   if (response.resultCode === 'SUCCESS') return response.result
   throw Error(`Api Helper Error: ${ JSON.stringify(response) }`)
 }

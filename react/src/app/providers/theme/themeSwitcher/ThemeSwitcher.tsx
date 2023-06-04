@@ -3,7 +3,7 @@ import { CiDark, CiLight } from 'react-icons/ci'
 import { GiMoon } from 'react-icons/gi'
 
 import { type ThemeSwitcherProps } from './themeSwitcherProps.model'
-import { ThemeValueType } from 'app/providers/theme/ThemeContext'
+import { type ThemeValueType } from 'app/providers/theme/ThemeContext'
 import { useTheme } from 'app/providers/theme/useTheme'
 
 const themes: Array<{ icon: ReactNode, label: ThemeValueType }> = [

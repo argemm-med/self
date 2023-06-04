@@ -20,7 +20,7 @@ export const Input = memo((props: InputProps) => {
       className={ `${ active && cls.active } ${ meta.touched && meta.error && cls.error } ${ cls['float-wrapper'] }` }>
       <label htmlFor={ id }>
         { label }&emsp;
-        { meta.touched && meta.error && <small>{ meta.error }</small> }
+        { meta.touched && meta.error && <small>@ { meta.error } @</small> }
       </label>
       <input
         id={ id }

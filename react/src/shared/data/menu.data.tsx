@@ -1,4 +1,4 @@
-import { IconType } from 'react-icons'
+import { type IconType } from 'react-icons'
 import { GoHome } from 'react-icons/go'
 import { FaDog } from 'react-icons/fa'
 import { Pages } from '@/shared/data/pages.data'

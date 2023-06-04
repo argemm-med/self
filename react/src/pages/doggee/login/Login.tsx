@@ -1,7 +1,7 @@
 import { Form, Formik } from 'formik'
 import { type FC } from 'react'
 
-import { DoggeeLoginForm, INITIAL_DOGGEE_LOGIN, SCHEMA_DOGGEE_LOGIN } from 'entities/doggee/doggeeLogin'
+import { type DoggeeLoginForm, INITIAL_DOGGEE_LOGIN, SCHEMA_DOGGEE_LOGIN } from 'entities/doggee/doggeeLogin'
 import { type LoginProps } from './loginProps.model'
 import { Input } from 'shared/ui/input/Input'
 

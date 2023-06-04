@@ -1,6 +1,6 @@
 import { type FC, type PropsWithChildren, useMemo, useState } from 'react'
 
-import { LayoutContext, LayoutContextProps } from 'app/providers/layout/LayoutContext'
+import { LayoutContext, type LayoutContextProps } from 'app/providers/layout/LayoutContext'
 import { LOCAL_STORAGE_KEYS } from 'shared/data/storage.data'
 
 const defaultLayout = localStorage.getItem(LOCAL_STORAGE_KEYS.layout) as LayoutContextProps['layoutType'] || 'menu'

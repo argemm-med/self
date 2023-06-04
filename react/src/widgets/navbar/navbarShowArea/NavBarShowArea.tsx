@@ -1,13 +1,12 @@
 import { memo } from 'react'
 
 import { type NavBarShowAreaProps } from './navBarShowAreaProps.model'
-import type { ReadonlyProps } from '@/shared/types/commonTypes'
 
 import cls from './navBarShowArea.module.scss'
 
-export const NavBarShowArea = memo(({ ...props }: ReadonlyProps<NavBarShowAreaProps>) => {
+export const NavBarShowArea = memo(({ ...props }: NavBarShowAreaProps) => {
   return (
-    <div className={ cls.wrapper } { ...props }/>
+    <div className={ cls.wrapper } { ...props } />
   )
 })
 

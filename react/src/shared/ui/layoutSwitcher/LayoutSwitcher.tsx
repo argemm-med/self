@@ -3,7 +3,7 @@ import React, { type FC, memo, type ReactNode, useLayoutEffect, useRef, useState
 import { type LayoutSwitcherProps } from './layoutSwitcherProps.model'
 import { AiOutlineLayout } from 'react-icons/ai'
 import { BsSegmentedNav } from 'react-icons/bs'
-import { LayoutContextProps } from 'app/providers/layout/LayoutContext'
+import { type LayoutContextProps } from 'app/providers/layout/LayoutContext'
 import { useLayout } from 'app/providers/layout/useLayout'
 
 const layouts: Array<{ icon: ReactNode, label: string, value: LayoutContextProps['layoutType'] }> = [
