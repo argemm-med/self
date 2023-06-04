@@ -10,6 +10,7 @@ interface NavLinkProps extends MenuLink, HTMLAttributes<HTMLAnchorElement> {
 }
 
 export const NavLink = memo(({ to, icon, label, onNavigate, ...props }: NavLinkProps) => {
+  const Icon = icon
   const location = useLocation()
 
   const isCurrentPath = useMemo(() => {
@@ -23,7 +24,7 @@ export const NavLink = memo(({ to, icon, label, onNavigate, ...props }: NavLinkP
       onClick={ onNavigate }
       className={ `${ styles.link } ${ isCurrentPath && styles.active }` }
     >
-      <span>{ icon ?? <RiPagesLine/> }</span>
+      <span>{ <Icon/> ?? <RiPagesLine/> }</span>
       { label }
     </Link>
   )

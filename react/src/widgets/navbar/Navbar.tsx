@@ -2,7 +2,6 @@ import type { HTMLProps } from 'react'
 import { memo } from 'react'
 import { MenuData } from '@/shared/data/menu.data'
 
-import type { ReadonlyProps } from '@/shared/types/commonTypes'
 import styles from './main.module.scss'
 import { NavLink } from '@/widgets/navbar/navLink/NavLink'
 
@@ -12,7 +11,7 @@ interface NavbarProps extends HTMLProps<HTMLDivElement> {
   onClose?: () => void
 }
 
-export const Navbar = memo(({ isVisible, overlay = false, onClose, ...props }: ReadonlyProps<NavbarProps>) => {
+export const Navbar = memo(({ isVisible, overlay = false, onClose, ...props }: NavbarProps) => {
   return (
     <>
       <nav
