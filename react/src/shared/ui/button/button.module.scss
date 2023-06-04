@@ -1,0 +1,29 @@
+.button {
+  align-items: center;
+  background-color: var(--bg-primary);
+  color: var(--color-primary);
+  border-radius: var(--border-radius-xs);
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  position: relative;
+  transition: box-shadow 0.3s, transform .15s;
+  box-shadow: var(--bg-accent) 0 3px 10px;
+  user-select: none;
+  white-space: nowrap;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: var(--bg-accent) 0 3px 10px;
+  }
+}
+
+.disabled {
+  color: var(--color-secondary);
+  pointer-events: none;
+  opacity: 0.7;
+}

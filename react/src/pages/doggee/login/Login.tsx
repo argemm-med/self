@@ -6,6 +6,7 @@ import { type LoginProps } from './loginProps.model'
 import { Input } from 'shared/ui/input/Input'
 
 import cls from './login.module.scss'
+import { Button } from 'shared/ui/button/Button'
 
 const Login: FC<LoginProps> = () => {
   const onSubmit = (values: DoggeeLoginForm) => {
@@ -24,7 +25,7 @@ const Login: FC<LoginProps> = () => {
             <span>loging page</span>
             <Input name='username' label='username' />
             <Input name='password' label='password' />
-            <button>auth</button>
+            <Button label='auth button' />
           </Form>
         </>
       </Formik>
