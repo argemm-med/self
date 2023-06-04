@@ -31,9 +31,9 @@
   transform: translateX(-500px);
   transition: 0.3s ease transform;
   backdrop-filter: blur(2px);
-  border-radius: var(--border-radius--s);
+  border-radius: var(--border-radius-s);
   z-index: var(--z-nav);
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 30%);
 
   &.active {
     width: calc(var(--nav-size) * 2);

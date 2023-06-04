@@ -5,7 +5,7 @@
   padding: 5px 10px;
   width: 100%;
   transition: all ease 0.2s;
-  border-radius: var(--border-radius--xs);
+  border-radius: var(--border-radius-xs);
   font-weight: 300;
   font-variant: all-petite-caps;
 
@@ -17,5 +17,5 @@
 
 .active {
   background: var(--bg-accent);
-  border-right: 2px solid var(--color-accent--yellow);
+  border-right: 2px solid var(--color-accent-yellow);
 }

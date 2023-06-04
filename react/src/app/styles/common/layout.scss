@@ -1,6 +1,7 @@
 .cards {
   --gap: 30px;
   --elements: 3;
+
   display: flex;
   flex-wrap: wrap;
   gap: var(--gap);
@@ -12,13 +13,13 @@
   width: calc((100% - (var(--elements) - 1) * var(--gap)) / (var(--elements)));
 }
 
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .cards {
     --elements: 2;
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .cards {
     --elements: 1;
   }
