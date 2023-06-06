@@ -1,0 +1,25 @@
+@import "../variables/variables";
+
+// Адаптивные свойства
+$max-width: 1920;
+$max-width-container: $container-width;
+
+@mixin flexible($property, $startSize, $minSize, $type: 1) {
+  $add-size: $startSize - $minSize;
+
+  @if $type == 1 {
+    // Только если меньше контейнера
+    #{$property}: $startSize + px;
+
+    @media (max-width: #{$max-width-container + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$add-size} * ((100vw - 320px) / #{$max-width-container - 320}));
+    }
+  } @else if $type == 2 {
+    // Только если больше контейнера
+    #{$property}: $startSize + px;
+
+    @media (min-width: #{$max-width-container + px}) {
+      #{$property}: calc(#{$minSize + px}#{$add-size} * ((100vw - 320px) / #{$max-width - 320}));
+    }
+  }
+}

@@ -26,6 +26,6 @@ body {
   background: var(--bg-primary);
 }
 
-p {
-  margin-bottom: 20px;
+.test {
+  @include flexible(font-size, 29, 16);
 }
