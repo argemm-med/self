@@ -24,7 +24,7 @@ const Login: FC<LoginProps> = () => {
       >
         <>
           <Form className={ `${ cls.block } secondary-block` }>
-            <span className='test'>loging page</span>
+            <span className='test'>login page</span>
             <Input
               autoFocus
               name='username'
